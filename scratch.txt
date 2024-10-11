@@ -1,0 +1,6 @@
+when green flag clicked
+forever
+    if <key [up arrow] pressed?> then
+        change y by (10)
+    end
+end

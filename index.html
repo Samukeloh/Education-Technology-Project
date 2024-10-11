@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STEM Quiz</title>
+</head>
+<body>
+    <h1>STEM Quiz</h1>
+    <div id="quiz"></div>
+    <button onclick="submitQuiz()">Submit</button>
+    
+    <script>
+        const quizData = [
+            { question: "What is H2O?", a: "Oxygen", b: "Water", c: "Hydrogen", correct: "b" },
+            // Add more questions as needed
+        ];
+
+        const quizContainer = document.getElementById('quiz');
+        quizData.forEach((item, index) => {
+            quizContainer.innerHTML += `<div>
+                <p>${item.question}</p>
+                <input type="radio" name="q${index}" value="a"> ${item.a}<br>
+                <input type="radio" name="q${index}" value="b"> ${item.b}<br>
+                <input type="radio" name="q${index}" value="c"> ${item.c}<br>
+            </div>`;
+        });
+
+        function submitQuiz() {
+            // Logic to evaluate answers
+        }
+    </script>
+</body>
+</html>
